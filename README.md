@@ -45,7 +45,7 @@ Visualización (Power BI): Dashboard interactivo con métricas accionables para 
 
 ## 🗄️ Dataset
 - Origen: Looker Ecommerce BigQuery Dataset. Kaggle
-- Tamaño: 7 archivos csv (distribution_centers, events, inventory__items, order_items, orders, products, users). 538 megabytes.
+- Tamaño: 7 archivos csv (distribution_centers, events, inventory_items, order_items, orders, products, users). 538 megabytes.
 - Características: dataset desnormalizado con redundancias y campos inconsistentes y costosos a nivel de memoria.  
 
 ---
