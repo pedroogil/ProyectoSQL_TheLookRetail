@@ -77,9 +77,11 @@ Se creó un **modelo en estrella** compuesto por:
 Ejemplos de consultas clave realizadas en SQL:
 
 Creación matriz BCG:
+
 <img width="902" height="517" alt="image" src="https://github.com/user-attachments/assets/9d1ce877-4ab9-452c-b1cb-4278fd04f1d8" />
 
 Clientes inactivos:
+
 <img width="608" height="372" alt="image" src="https://github.com/user-attachments/assets/0d9afdcf-8540-4184-9825-272e5a740964" />
 
 ---
