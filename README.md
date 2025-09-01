@@ -21,7 +21,19 @@ Este proyecto muestra el flujo completo de un Data Analyst: limpiar, modelar, an
 
 ---
 
-## 🚀 Insights clave del análisis
+## 🛠️ Flujo de trabajo end-to-end
+
+Carga de datos: Importación de archivos CSV con Python.
+
+Limpieza y normalización (SQL): Eliminación de duplicados, estandarización de tipos, reducción de redundancia y creación de modelo en estrella con claves primarias y foráneas.
+
+Análisis exploratorio (SQL): Segmentación de clientes, facturación por producto y centro, margen y tendencias, identificación de clientes inactivos y creación de sistema de recomendación.
+
+Visualización (Power BI): Dashboard interactivo con métricas accionables para negocio.
+
+---
+
+## 🚀 Hallazgos más importantes
 
    - Pedidos y ventas: +106K pedidos desde 2019, con tendencia de facturación ascendente en 2023.
    - Clientes: +80K clientes, pero 73% inactivos en los últimos 3 meses → buscar estrategias de reactivación.
@@ -31,18 +43,18 @@ Este proyecto muestra el flujo completo de un Data Analyst: limpiar, modelar, an
 
 ---
 
+## 🗄️ Dataset
+- Origen: Looker Ecommerce BigQuery Dataset. Kaggle
+- Tamaño: 7 archivos csv (distribution_centers, events, inventory__items, order_items, orders, products, users). 538 megabytes.
+- Características: dataset desnormalizado con redundancias y campos inconsistentes y costosos a nivel de memoria.  
+
+---
+
 ## 📂 Estructura del repositorio
 - `TheLookRetail_fase1_limpieza.sql` → Scripts de limpieza, normalización y modelado (Fase 1).
 - `TheLookRetail_fase2_analisis.sql` → Consultas SQL con análisis exploratorio (Fase 2).
 - `powerbi/` → Capturas y archivo `.pbix` con el dashboard final (Fase 3).
 - `README.md` → Documentación del proyecto.
-
----
-
-## 🗄️ Dataset
-- Origen: Looker Ecommerce BigQuery Dataset. Kaggle
-- Tamaño: 7 archivos csv (distribution_centers, events, inventory__items, order_items, orders, products, users). 538 megabytes.
-- Características: dataset desnormalizado con redundancias y campos inconsistentes y costosos a nivel de memoria.  
 
 ---
 
@@ -83,6 +95,7 @@ Se construyó un **dashboard en Power BI** que incluye:
 👉 *(En esta sección sí o sí pon **capturas del dashboard final**. Son oro para los reclutadores: con un vistazo ven lo que sabes hacer.)*
 
 ---
+
 ## Limitaciones del dataset
 
     - Algunos usuarios aparecen como “anónimos” → limita la trazabilidad individual.
@@ -90,6 +103,7 @@ Se construyó un **dashboard en Power BI** que incluye:
     - El dataset proviene de Kaggle con fines educativos → no representa datos reales de negocio.
 
 ---
+
 ## 🤝 Contacto
 👤 **Pedro Gil Olivares**  
 🔗 [LinkedIn](www.linkedin.com/in/pedro-gil-olivares-485517216)  
