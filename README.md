@@ -22,22 +22,12 @@ Este proyecto muestra el flujo completo de un Data Analyst: limpiar, modelar, an
 ---
 
 ## 🚀 Insights clave del análisis
-1. **Limpieza y normalización del dataset** (SQL).
-   - Eliminación de duplicados.
-   - Estandarización de tipos de datos.
-   - Reducción de redundancia.
-   - Normalización mediante creación de tablas de dimensión.
-   - Definición de claves primarias y foráneas para construir un modelo en estrella.
-     
-2. **Análisis exploratorio**.
+
    - Pedidos y ventas: +106K pedidos desde 2019, con tendencia de facturación ascendente en 2023.
    - Clientes: +80K clientes, pero 73% inactivos en los últimos 3 meses → buscar estrategias de reactivación.
    - Portfolio: el 62% de los productos generan el 90% de la facturación; detección de productos con >100% de margen y tendencias de crecimiento (+700% el último trimestre).
    - Distribución: Houston, Memphis y Chicago son los centros más rentables.
    - Avanzado: Segmentación de clientes en matriz BCG y un sistema de recomendación de productos listo para orientar ventas.
-     
-3. **Visualización interactiva**.
-   - Creación de un dashboard en Power BI con métricas y visualizaciones accionables.
 
 ---
 
