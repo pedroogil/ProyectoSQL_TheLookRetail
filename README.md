@@ -21,7 +21,7 @@ Este proyecto muestra el flujo completo de un Data Analyst: limpiar, modelar, an
 
 ---
 
-## 🚀 Objetivos del proyecto
+## 🚀 Insights clave del análisis
 1. **Limpieza y normalización del dataset** (SQL).
    - Eliminación de duplicados.
    - Estandarización de tipos de datos.
@@ -93,7 +93,13 @@ Se construyó un **dashboard en Power BI** que incluye:
 👉 *(En esta sección sí o sí pon **capturas del dashboard final**. Son oro para los reclutadores: con un vistazo ven lo que sabes hacer.)*
 
 ---
+## Limitaciones del dataset
 
+    - Algunos usuarios aparecen como “anónimos” → limita la trazabilidad individual.
+    - Ciudades y localizaciones incompletas o desconocidas → afecta a ciertos análisis de distribución geográfica.
+    - El dataset proviene de Kaggle con fines educativos → no representa datos reales de negocio.
+
+---
 ## 🤝 Contacto
 👤 **Pedro Gil Olivares**  
 🔗 [LinkedIn](www.linkedin.com/in/pedro-gil-olivares-485517216)  
@@ -101,6 +107,3 @@ Se construyó un **dashboard en Power BI** que incluye:
 
 ---
 
-## 📌 Nota para reclutadores
-Este proyecto refleja un flujo de trabajo **end-to-end en Data Analytics**, aplicando SQL, modelado de datos y visualización.  
-El objetivo es mostrar buenas prácticas, transparencia en los procesos de limpieza y la capacidad de transformar datos crudos en insights de negocio.
