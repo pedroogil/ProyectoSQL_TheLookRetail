@@ -1,23 +1,17 @@
 # 🛍️ Proyecto The Look Retail: Limpieza, análisis y visualización
-En este proyecto transformé un dataset crudo de e-commerce retail en insights accionables para el negocio.
+En este proyecto transformé un dataset crudo de e-commerce en insights accionables para el negocio.
 
-Partí de datos desordenados, con duplicados, inconsistencias y redundancias.
-
-A través de SQL realicé una limpieza exhaustiva: normalización de tablas, unificación de tipos de datos, eliminación de duplicados y construcción de claves primarias/foráneas.
-
-A partir de ahí, realicé análisis que responden preguntas clave como:
+El trabajo se centra en la fase de limpieza y análisis con SQL, mostrando cómo a partir de datos desordenados, con duplicados y redundancias, es posible construir un modelo sólido y obtener respuestas a preguntas clave:
 
 **¿Qué clientes generan la mayor parte de la facturación?**
 
-**¿Qué productos son más rentables y cuáles deberíamos descartar?**
+**¿Qué productos son más rentables y cuáles habría que descartar?**
 
 **¿Cómo evoluciona la facturación por canal y región?**
 
 **¿Qué clientes están en riesgo de abandono y cómo podemos reactivarlos?**
 
-Finalmente, convertí todo ese análisis en un dashboard interactivo en Power BI, pensado para que cualquier equipo de negocio pueda tomar decisiones en segundos.
-
-Este proyecto muestra el flujo completo de un Data Analyst: limpiar, modelar, analizar y comunicar.  
+Este proyecto refleja el flujo de un Data Analyst en su parte más crítica: limpiar, modelar y analizar datos con SQL.
 
 ---
 
@@ -25,53 +19,62 @@ Este proyecto muestra el flujo completo de un Data Analyst: limpiar, modelar, an
 
 Carga de datos: Importación de archivos CSV con Python.
 
-Limpieza y normalización (SQL): Eliminación de duplicados, estandarización de tipos, reducción de redundancia y creación de modelo en estrella con claves primarias y foráneas.
+Limpieza y normalización (SQL): Eliminación de duplicados, estandarización de tipos de datos, reducción de redundancia y construcción de modelo en estrella con claves primarias y foráneas.
 
-Análisis exploratorio (SQL): Segmentación de clientes, facturación por producto y centro, margen y tendencias, identificación de clientes inactivos y creación de sistema de recomendación.
-
-Visualización (Power BI): Dashboard interactivo con métricas accionables para negocio.
+Análisis exploratorio (SQL): Segmentación de clientes, facturación por producto y centro, identificación de clientes inactivos, creación de una matriz BCG para evaluar el portfolio de productos y creación de sistema de recomendación.
 
 ---
 
-## 🚀 Hallazgos más importantes
+## 📊 Técnicas SQL aplicadas
 
-   - Pedidos y ventas: +106K pedidos desde 2019, con tendencia de facturación ascendente en 2023.
-   - Clientes: +80K clientes, pero 73% inactivos en los últimos 3 meses → buscar estrategias de reactivación.
-   - Portfolio: el 62% de los productos generan el 90% de la facturación; detección de productos con >100% de margen y tendencias de crecimiento (+700% el último trimestre).
-   - Distribución: Houston, Memphis y Chicago son los centros más rentables.
-   - Avanzado: Segmentación de clientes en matriz BCG y un sistema de recomendación de productos listo para orientar ventas.
+### 1. Limpieza y modelado de datos
+
+   - Eliminación de duplicados y gestión de valores nulos mediante reemplazos controlados (“Desconocida”, “Anónimo”).
+   - Supresión de campos redundantes y normalización parcial para mejorar la integridad.
+   - Transformación del esquema original en un modelo en estrella con dos tablas de hechos (order_items, events) y seis tablas de dimensiones.
+
+<img width="872" height="827" alt="image" src="https://github.com/user-attachments/assets/8c7830f2-b580-4a9b-898e-3059b581874d" />
+
+### 2. Consultas de explotación y análisis
+
+   - Subconsultas y CTEs para segmentaciones avanzadas (clientes, productos en tendencia).
+   - Funciones de ventana (window functions) como RANK() o ROW_NUMBER() para calcular márgenes por categoría y ranking de productos.
+   - Análisis temporal con funciones de fecha.
+   - Segmentación de clientes con la matriz BCG, categorizando en base a pedidos y facturación media.
+   - Sistema básico de recomendación a partir de co-ocurrencia de productos en pedidos compartidos, materializado en tabla auxiliar.
+
+## 🚀 Hallazgos más importantes
+Más allá del aspecto técnico, el uso de SQL permitió extraer insights relevantes:
+
+   - +106K pedidos desde 2019 → facturación con tendencia ascendente en 2023.
+   - +80K clientes, pero **73% inactivos en los últimos 3 meses** → oportunidad de reactivación.
+   - **El 62% de los productos generan el 90% de la facturación** (ley de Pareto) → posibilidad de optimizar el catálogo.
+   - Identificación de productos con **márgenes >100%** y tendencias de crecimiento (+700% el último trimestre) → se debería potenciar la venta de estos productos
+   - Centros de distribución más rentables: Houston, Memphis y Chicago.
 
 ---
 
 ## 🗄️ Dataset
-- Origen: Looker Ecommerce BigQuery Dataset. Kaggle
-- Tamaño: 7 archivos csv (distribution_centers, events, inventory_items, order_items, orders, products, users). 538 megabytes.
-- Características: dataset desnormalizado con redundancias y campos inconsistentes y costosos a nivel de memoria.  
+- Origen: Looker Ecommerce BigQuery Dataset (Kaggle).
+- Tamaño: 7 archivos CSV (538 MB)
+- Tablas: distribution_centes, events, inventory_items, order_items, orders, products, users.
+- Características: dataset desnormalizado con redundancias y campos inconsistentes.  
 
 ---
 
 ## 📂 Estructura del repositorio
-- `TheLookRetail_fase1_limpieza.sql` → Scripts de limpieza, normalización y modelado (Fase 1).
-- `TheLookRetail_fase2_analisis.sql` → Consultas SQL con análisis exploratorio (Fase 2).
-- `powerbi/` → Capturas y archivo `.pbix` con el dashboard final (Fase 3).
+- `TheLookRetail_fase1_limpieza.sql` → Scripts de limpieza, normalización y modelado.
+- `TheLookRetail_fase2_analisis.sql` → Consultas SQL con análisis exploratorio.
 - `README.md` → Documentación del proyecto.
 
 ---
 
-## 🛠️ Herramientas utilizadas
-- **Python (Jupyter Notebook)** → Carga de archivos CSV.  
-- **SQL (MySQL Workbench)** → Limpieza, transformación, modelado relacional y fase de análisis.  
-- **Power BI** → Visualización y creación de dashboard interactivo.  
-- **GitHub** → Documentación del flujo de trabajo.  
-
----
-
 ## 📊 Limpieza y modelo de datos (Fase 1)
-Se creó un **modelo en estrella** compuesto por:
+Se construyó un **modelo en estrella** compuesto por:
 - **Tablas de hechos**: `order_items`, `events`
 - **Tablas de dimensiones**: `users`, `products`, `orders`, `inventory_items`, `distribution_centers`, `location`
 
-<img width="872" height="827" alt="image" src="https://github.com/user-attachments/assets/8c7830f2-b580-4a9b-898e-3059b581874d" />
+
 
 ---
 
@@ -88,19 +91,17 @@ Clientes inactivos:
 
 ---
 
-## 📈 Dashboard (Fase 3)
-Se construyó un **dashboard en Power BI** que incluye:
+## Limitaciones del dataset
 
-
-👉 *(En esta sección sí o sí pon **capturas del dashboard final**. Son oro para los reclutadores: con un vistazo ven lo que sabes hacer.)*
+    - Usuarios anónimos que limitan la trazabilidad individual.
+    - Localizaciones incompletas o desconocidas. Afecta a ciertos análisis de distribución geográfica.
+    - El dataset proviene de Kaggle con fines educativos, no representa datos reales de negocio.
 
 ---
 
-## Limitaciones del dataset
+## 🔜 Próximos pasos
 
-    - Algunos usuarios aparecen como “anónimos” → limita la trazabilidad individual.
-    - Ciudades y localizaciones incompletas o desconocidas → afecta a ciertos análisis de distribución geográfica.
-    - El dataset proviene de Kaggle con fines educativos → no representa datos reales de negocio.
+En una fase posterior, se añadirá un dashboard interactivo en Power BI para complementar los análisis y facilitar la toma de decisiones visual.
 
 ---
 
