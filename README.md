@@ -16,7 +16,6 @@ Este proyecto refleja el flujo de un Data Analyst en su parte más crítica: lim
 ---
 
 ## 🛠️ Flujo de trabajo end-to-end
-
 Carga de datos: Importación de archivos CSV con Python.
 
 Limpieza y normalización (SQL): Eliminación de duplicados, estandarización de tipos de datos, reducción de redundancia y construcción de modelo en estrella con claves primarias y foráneas.
@@ -28,7 +27,6 @@ Análisis exploratorio (SQL): Segmentación de clientes, facturación por produc
 ## 📊 Técnicas SQL aplicadas
 
 ### 1. Limpieza y modelado de datos
-
    - Eliminación de duplicados y gestión de valores nulos mediante reemplazos controlados (“Desconocida”, “Anónimo”).
    - Supresión de campos redundantes y normalización parcial para mejorar la integridad.
    - Transformación del esquema original en un modelo en estrella con dos tablas de hechos (order_items, events) y seis tablas de dimensiones.
@@ -36,7 +34,6 @@ Análisis exploratorio (SQL): Segmentación de clientes, facturación por produc
 <img width="872" height="827" alt="image" src="https://github.com/user-attachments/assets/8c7830f2-b580-4a9b-898e-3059b581874d" />
 
 ### 2. Consultas de explotación y análisis
-
    - Subconsultas y CTEs para segmentaciones avanzadas (clientes, productos en tendencia).
    - Funciones de ventana (window functions) como RANK() o ROW_NUMBER() para calcular márgenes por categoría y ranking de productos.
    - Análisis temporal con funciones de fecha.
@@ -72,7 +69,6 @@ Más allá del aspecto técnico, el uso de SQL permitió extraer insights releva
 ---
 
 ## ⚠️ Limitaciones del dataset
-
 - Usuarios anónimos que limitan la trazabilidad individual.
 - Localizaciones incompletas o desconocidas. Afecta a ciertos análisis de distribución geográfica.
 - El dataset proviene de Kaggle con fines educativos, no representa datos reales de negocio.
@@ -80,7 +76,6 @@ Más allá del aspecto técnico, el uso de SQL permitió extraer insights releva
 ---
 
 ## 🔜 Próximos pasos
-
 En una fase posterior, se añadirá un dashboard interactivo en Power BI para complementar los análisis y facilitar la toma de decisiones visual.
 
 ---
@@ -91,4 +86,3 @@ En una fase posterior, se añadirá un dashboard interactivo en Power BI para co
 📧 pedrogilolivares009@gmail.com  
 
 ---
-
