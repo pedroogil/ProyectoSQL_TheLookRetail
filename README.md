@@ -43,6 +43,8 @@ Análisis exploratorio (SQL): Segmentación de clientes, facturación por produc
    - Segmentación de clientes en matriz BCG, categorizados según número de pedidos y facturación media.
    - Sistema básico de recomendación a partir de co-ocurrencia de productos en pedidos compartidos, materializado en tabla auxiliar.
 
+---
+
 ## 🚀 Hallazgos más importantes
 Más allá del aspecto técnico, el uso de SQL permitió extraer insights relevantes:
 
