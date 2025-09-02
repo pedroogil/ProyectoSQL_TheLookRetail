@@ -38,7 +38,7 @@ Análisis exploratorio (SQL): Segmentación de clientes, facturación por produc
    - Funciones de ventana (window functions) como RANK() o ROW_NUMBER() para calcular márgenes por categoría y ranking de productos.
    - Análisis temporal con funciones de fecha.
    - Segmentación de clientes en matriz BCG, categorizados según número de pedidos y facturación media.
-   - Sistema básico de recomendación a partir de co-ocurrencia de productos en pedidos compartidos, materializado en tabla auxiliar.
+   - Diseñé e implementé un sistema básico de recomendación a partir de co-ocurrencia de productos en pedidos compartidos, materializado en tabla auxiliar.
 
 ---
 
@@ -48,7 +48,7 @@ Más allá del aspecto técnico, el uso de SQL permitió extraer insights releva
    - +106K pedidos desde 2019 → facturación con tendencia ascendente en 2023.
    - +80K clientes, pero **73% inactivos en los últimos 3 meses** → oportunidad de reactivación.
    - **El 62% de los productos generan el 90% de la facturación** (ley de Pareto) → posibilidad de optimizar el catálogo.
-   - Identificación de productos con **márgenes >100%** y tendencias de crecimiento (+700% el último trimestre) → se debería potenciar la venta de estos productos
+   - Identifiqué productos con **márgenes >100%** y tendencias de crecimiento (+700% el último trimestre) → se debería potenciar la venta de estos productos
    - Centros de distribución más rentables: Houston, Memphis y Chicago.
 
 ---
@@ -80,7 +80,7 @@ En una fase posterior, se añadirá un dashboard interactivo en Power BI para co
 
 ---
 
-## 🤝 Contacto
+## 🤝 ¡Hablemos!
 👤 **Pedro Gil Olivares**  
 🔗 [LinkedIn](www.linkedin.com/in/pedro-gil-olivares-485517216)  
 📧 pedrogilolivares009@gmail.com  
