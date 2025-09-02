@@ -40,7 +40,7 @@ Análisis exploratorio (SQL): Segmentación de clientes, facturación por produc
    - Subconsultas y CTEs para segmentaciones avanzadas (clientes, productos en tendencia).
    - Funciones de ventana (window functions) como RANK() o ROW_NUMBER() para calcular márgenes por categoría y ranking de productos.
    - Análisis temporal con funciones de fecha.
-   - Segmentación de clientes con la matriz BCG, categorizando en base a pedidos y facturación media.
+   - Segmentación de clientes en matriz BCG, categorizados según número de pedidos y facturación media.
    - Sistema básico de recomendación a partir de co-ocurrencia de productos en pedidos compartidos, materializado en tabla auxiliar.
 
 ## 🚀 Hallazgos más importantes
@@ -69,29 +69,7 @@ Más allá del aspecto técnico, el uso de SQL permitió extraer insights releva
 
 ---
 
-## 📊 Limpieza y modelo de datos (Fase 1)
-Se construyó un **modelo en estrella** compuesto por:
-- **Tablas de hechos**: `order_items`, `events`
-- **Tablas de dimensiones**: `users`, `products`, `orders`, `inventory_items`, `distribution_centers`, `location`
-
-
-
----
-
-## 🔍 Análisis exploratorio (Fase 2)
-Ejemplos de consultas clave realizadas en SQL:
-
-Creación matriz BCG:
-
-<img width="902" height="517" alt="image" src="https://github.com/user-attachments/assets/9d1ce877-4ab9-452c-b1cb-4278fd04f1d8" />
-
-Clientes inactivos:
-
-<img width="608" height="372" alt="image" src="https://github.com/user-attachments/assets/0d9afdcf-8540-4184-9825-272e5a740964" />
-
----
-
-## Limitaciones del dataset
+## ⚠️ Limitaciones del dataset
 
     - Usuarios anónimos que limitan la trazabilidad individual.
     - Localizaciones incompletas o desconocidas. Afecta a ciertos análisis de distribución geográfica.
