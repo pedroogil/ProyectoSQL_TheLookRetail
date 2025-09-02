@@ -81,7 +81,8 @@ En una fase posterior, se añadirá un dashboard interactivo en Power BI para co
 ---
 
 ## 🤝 ¡Hablemos!
-👤 **Pedro Gil Olivares**  
+👤 **Pedro Gil Olivares** 
+
 🔗 www.linkedin.com/in/pedro-gil-olivares-485517216
 
 📧 pedrogilolivares009@gmail.com  
