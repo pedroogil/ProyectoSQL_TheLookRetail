@@ -67,6 +67,9 @@ Más allá del aspecto técnico, el uso de SQL permitió extraer insights releva
 - `TheLookRetail_fase2_analisis.sql` → Consultas SQL con análisis exploratorio.
 - `README.md` → Documentación del proyecto.
 
+- Usuarios anónimos que limitan la trazabilidad individual.
+- Localizaciones incompletas o desconocidas. Afecta a ciertos análisis de distribución geográfica.
+- El dataset proviene de Kaggle con fines educativos, no representa datos reales de negocio.
 ---
 
 ## ⚠️ Limitaciones del dataset
